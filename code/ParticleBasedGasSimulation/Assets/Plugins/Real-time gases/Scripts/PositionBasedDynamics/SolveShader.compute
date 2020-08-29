@@ -1,0 +1,357 @@
+﻿//uniform data
+float timestep;
+float3 Gravity;
+float3 dragForce;
+float inverseRadius;
+float radius;
+float l;
+float K;
+float psi1;
+float psi2;
+float psi3;
+float psi4;
+float psi5;
+
+//structs
+
+
+RWStructuredBuffer<float3> VelocityBuffer;
+StructuredBuffer<float> DampingBuffer;
+RWStructuredBuffer<float3> PositionBuffer;
+RWStructuredBuffer<float3> PredictedBuffer;
+StructuredBuffer<float> ViscosityBuffer;
+StructuredBuffer<float> ParticleMassBuffer;
+StructuredBuffer<float> DensityBuffer;
+RWStructuredBuffer<float> DensitiesBuffer;
+StructuredBuffer<float> NeighborMassBuffer;
+StructuredBuffer<float> NeighborDensitiesBuffer;
+StructuredBuffer<float3> NeighborPositionBuffer;
+StructuredBuffer<float3> PointValueBuffer;
+StructuredBuffer<int2> PointValueOffsetBuffer;
+RWStructuredBuffer<float3> VorticityBuffer;
+StructuredBuffer<float3> NeighborPredictedBuffer;
+StructuredBuffer<float3> NeighborVelocityBuffer;
+StructuredBuffer<float> NeighborLambdaBuffer;
+RWStructuredBuffer<float> LambdaBuffer;
+StructuredBuffer<int2> NeighborOffsetBuffer;
+StructuredBuffer<int> normalCount;
+
+//helper Functions
+
+float3 gradW(float3 inputVector){
+
+    float3 result = float3 (0,0,0);
+    
+    float rl = sqrt(inputVector.x * inputVector.x + inputVector.y * inputVector.y + inputVector.z * inputVector.z);
+    
+    float q = rl * inverseRadius;
+    
+    if (!(q <= 1.0)) return result;
+    
+    if (!(rl > 1.0e-6)) return result;
+    
+    float3 gradQ;
+    
+    float factor = 1.0 / (rl * radius);
+    
+    gradQ.x = inputVector.x * factor;
+    gradQ.y = inputVector.y * factor;
+    gradQ.z = inputVector.z * factor;
+    
+    if (q < 0.5)
+    {
+        factor = l * q * (3.0 * q - 2.0);
+        
+        result.x = gradQ.x * factor;
+        result.y = gradQ.y * factor;
+        result.z = gradQ.z * factor;
+    }
+    else
+    {
+        factor = 1.0 - q;
+        
+        factor = l * (-factor * factor);
+        
+        result.x = gradQ.x * factor;
+        result.y = gradQ.y * factor;
+        result.z = gradQ.z * factor;
+    }
+    
+    return result;
+}
+
+float calcW(float3 inputVector){
+
+    float result = 0.0;
+
+    float rl = sqrt(inputVector.x * inputVector.x + inputVector.y * inputVector.y + inputVector.z * inputVector.z);
+
+    float q = rl * inverseRadius;
+
+    if (!(q <= 1.0)) return result;
+    if (q <= 0.5)
+    {
+
+        float q2 = q * q;
+        float q3 = q2 * q;
+    
+        result = K * (6.0 * q3 - 6.0 * q2 + 1.0);
+    }
+    else
+    {
+        float v = 1.0 - q;
+        result = K * 2.0 * v * v * v;
+    }
+    
+    return result;
+}
+
+//kernels
+
+#pragma kernel ApplyExternalForces
+
+[numthreads(8,8,1)]
+void ApplyExternalForces (uint3 id : SV_DispatchThreadID)
+{
+    float3 Velocity = VelocityBuffer[id.x] - (VelocityBuffer[id.x] * DampingBuffer[id.x]) * timestep;	
+    
+    Velocity += Gravity * timestep; 
+    
+    VelocityBuffer[id.x] = Velocity;
+    
+    
+}
+
+#pragma kernel EstimatePositions
+
+[numthreads(8,1,1)]
+
+void EstimatePositions (uint3 id : SV_DispatchThreadID)
+{
+    PredictedBuffer[id.x] = PositionBuffer[id.x] + timestep * VelocityBuffer[id.x];
+}
+
+#pragma kernel UpdateConstraint
+
+[numthreads(8,1,1)]
+
+void UpdateConstraint (uint3 id : SV_DispatchThreadID)
+{
+    DensitiesBuffer[id.x] = ParticleMassBuffer[id.x] * calcW(float3 (0,0,0));
+    
+    for(int i = 0; i < NeighborOffsetBuffer[id.x].y; i++)
+    {
+        DensitiesBuffer[id.x] += ParticleMassBuffer[id.x] * calcW(PredictedBuffer[id.x] - NeighborPredictedBuffer[id.x + NeighborOffsetBuffer[id.x].x]);
+    }
+    
+    float _psi = 0.0f;
+    
+    switch(normalCount[id.x])
+    {
+        case 0: 
+            _psi = psi1;
+            break;
+        case 1:
+            _psi = psi2;
+            break;
+        case 2:
+            _psi = psi3;
+            break;
+        case 3:
+            _psi = psi4;
+            break;
+        case 4:
+            _psi = psi5;
+            break;                                    
+    }
+    
+    for(int pointi = 0; pointi < PointValueOffsetBuffer[id.x].y; pointi++)
+    {
+        DensitiesBuffer[id.x] += _psi * calcW(PredictedBuffer[id.x] - PointValueBuffer[id.x + PointValueOffsetBuffer[id.x].x + pointi]);
+    }
+    
+    float eps = 1.0e-6;
+    float inverseDensity = 1.0 / DensityBuffer[id.x];
+    float massMulInvDensity = ParticleMassBuffer[id.x] * inverseDensity;
+    
+    float c = DensitiesBuffer[id.x] * inverseDensity - 1.0;
+    
+    if(c < 0.0) c = 0.0;
+    
+    if(c != 0.0)
+    {
+        float sumGradC2 = 0.0;
+        float3 gradCi = float3 (0,0,0);
+        for(int j = 0; j < NeighborOffsetBuffer[id.x].y; j++)
+        {
+            float3 _gradW = gradW(PredictedBuffer[id.x] - NeighborPredictedBuffer[id.x + NeighborOffsetBuffer[id.x].x + j]);
+            
+            float3 gradCj = float3(-massMulInvDensity * _gradW.x, -massMulInvDensity * _gradW.y, -massMulInvDensity * _gradW.z);
+            
+            sumGradC2 += gradCj.x * gradCj.x + gradCj.y * gradCj.y + gradCj.z * gradCj.z;
+            
+            gradCi.x -= gradCj.x;
+            gradCi.y -= gradCj.y;
+            gradCi.z -= gradCj.z;
+        }
+        for(int pointj = 0; pointj < PointValueOffsetBuffer[id.x].y; pointj++)
+        {
+            float3 _gradW2 = gradW(PredictedBuffer[id.x] - PointValueBuffer[id.x + PointValueOffsetBuffer[id.x].x + pointj]);
+            
+            float __psi = 0.0f;
+            
+            switch(normalCount[id.x])
+            {
+                case 0: 
+                    __psi = psi1;
+                    break;
+                case 1:
+                    __psi = psi2;
+                    break;
+                case 2:
+                    __psi = psi3;
+                    break;
+                case 3:
+                    __psi = psi4;
+                    break;
+                case 4:
+                    __psi = psi5;
+                    break;                                    
+            }
+            float psi = -__psi * inverseDensity;
+            
+            float3 gradCj2 = float3(psi* _gradW2.x, psi * _gradW2.y, psi * _gradW2.z);
+            
+            sumGradC2 += gradCj2.x * gradCj2.x + gradCj2.y * gradCj2.y + gradCj2.z * gradCj2.z;
+            
+            
+            gradCi.x -= gradCj2.x;
+            gradCi.y -= gradCj2.y;
+            gradCi.z -= gradCj2.z;
+        }
+        sumGradC2 += gradCi.x * gradCi.x + gradCi.y * gradCi.y + gradCi.z * gradCi.z;
+        
+        LambdaBuffer[id.x] = -c / (sumGradC2 + eps);
+    }
+    else
+    {
+        LambdaBuffer[id.x] = 0.0;
+    }
+    
+    float3 corr = float3 (0,0,0);
+    float lambda;
+    for(int jter = 0; jter < NeighborOffsetBuffer[id.x].y; jter++)
+    {
+    
+        float3 gradientW = gradW(PredictedBuffer[id.x] - NeighborPredictedBuffer[id.x + NeighborOffsetBuffer[id.x].x + jter]);
+        lambda = (LambdaBuffer[id.x] + NeighborLambdaBuffer[id.x + NeighborOffsetBuffer[id.x].x + jter]) * -massMulInvDensity;
+        corr.x -= lambda * gradientW.x;
+        corr.y -= lambda * gradientW.y;
+        corr.z -= lambda * gradientW.z;
+    
+    }
+    
+    for(int pointiter = 0; pointiter < PointValueOffsetBuffer[id.x].y; pointiter++)
+    {
+        float3 gradientOfW = gradW(PredictedBuffer[id.x] - PointValueBuffer[id.x + PointValueOffsetBuffer[id.x].x + pointiter]);
+        float ___psi = 0.0f;
+         switch(normalCount[id.x])
+            {
+                case 0: 
+                    ___psi = psi1;
+                    break;
+                case 1:
+                    ___psi = psi2;
+                    break;
+                case 2:
+                    ___psi = psi3;
+                    break;
+                case 3:
+                    ___psi = psi4;
+                    break;
+                case 4:
+                    ___psi = psi5;
+                    break;                                    
+            }
+        
+        float lambda2 = LambdaBuffer[id.x] * ___psi * inverseDensity;
+        
+        corr.x -= lambda * gradientOfW.x;
+        corr.y -= lambda * gradientOfW.y;
+        corr.z -= lambda * gradientOfW.z;
+    }
+    PredictedBuffer[id.x] += corr;
+    
+}
+
+#pragma kernel UpdateVelocities
+
+[numthreads(8,1,1)]
+
+void UpdateVelocities (uint3 id : SV_DispatchThreadID)
+{
+
+    float3 n = float3 (0,0,0);
+    
+    float inverseTimestep = 1 / timestep;
+    
+    VelocityBuffer[id.x] = (PredictedBuffer[id.x] - PositionBuffer[id.x]) * inverseTimestep;
+    
+    float3 drag = -0.5 * (VelocityBuffer[id.x] - dragForce) * (1 - (DensitiesBuffer[id.x]/DensityBuffer[id.x]));
+    
+    for(int iter = 0; iter < NeighborOffsetBuffer[id.x].y; iter++)
+    {
+        n += (NeighborMassBuffer[id.x + NeighborOffsetBuffer[id.x].x + iter] / NeighborDensitiesBuffer[id.x + NeighborOffsetBuffer[id.x].x + iter]) * gradW(PositionBuffer[id.x] - NeighborPositionBuffer[id.x + NeighborOffsetBuffer[id.x].x + iter]);
+    }
+    
+    for(int pointjter = 0; pointjter < PointValueOffsetBuffer[id.x].y; pointjter++)
+    {
+        n += gradW(PositionBuffer[id.x] - PointValueBuffer[id.x + PointValueOffsetBuffer[id.x].x + pointjter]);
+    }
+    
+    VorticityBuffer[id.x] = timestep * (0.3 * (cross(n, float3 (0,9.81,0))) + dot(VorticityBuffer[id.x], gradW(VelocityBuffer[id.x])));
+    
+    float3 vort = float3 (0,0,0);
+    
+    for(int iterator = 0; iterator < NeighborOffsetBuffer[id.x].y; iterator++)
+    {
+        vort += cross(VorticityBuffer[id.x], PositionBuffer[id.x] -  NeighborPositionBuffer[id.x + NeighborOffsetBuffer[id.x].x + iterator]) * gradW(PositionBuffer[id.x] - NeighborPositionBuffer[id.x + NeighborOffsetBuffer[id.x].x + iterator]);
+    }
+    VelocityBuffer[id.x] += (((vort + drag) / ParticleMassBuffer[id.x]) * timestep);
+}
+
+#pragma kernel ComputeViscosity
+
+[numthreads(8,1,1)]
+
+void ComputeViscosity (uint3 id : SV_DispatchThreadID)
+{
+    float viscosityMulMass = ViscosityBuffer[id.x] * ParticleMassBuffer[id.x];
+    
+    float3 pi = PredictedBuffer[id.x];
+    
+    for(int jterator = 0; jterator < NeighborOffsetBuffer[id.x].y; jterator++)
+    {
+    
+        float invDensity = 1.0 / NeighborDensitiesBuffer[id.x + NeighborOffsetBuffer[id.x].x + jterator];
+        
+        float3 pn = NeighborPredictedBuffer[id.x + + NeighborOffsetBuffer[id.x].x + jterator];
+        
+        float k = calcW(pi - pn) * viscosityMulMass * invDensity;
+        
+        VelocityBuffer[id.x] -= k * (VelocityBuffer[id.x] - NeighborVelocityBuffer[id.x + NeighborOffsetBuffer[id.x].x + jterator]);
+        
+    }
+}
+
+#pragma kernel UpdatePositions
+
+[numthreads(8,1,1)]
+
+void UpdatePositions (uint3 id : SV_DispatchThreadID)
+{
+    PositionBuffer[id.x] = PredictedBuffer[id.x];
+}
+
+
+

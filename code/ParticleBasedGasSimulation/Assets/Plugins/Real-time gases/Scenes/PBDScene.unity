@@ -1,0 +1,4110 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!29 &1
+OcclusionCullingSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_OcclusionBakeSettings:
+    smallestOccluder: 5
+    smallestHole: 0.25
+    backfaceThreshold: 100
+  m_SceneGUID: 00000000000000000000000000000000
+  m_OcclusionCullingData: {fileID: 0}
+--- !u!104 &2
+RenderSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 9
+  m_Fog: 0
+  m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  m_FogMode: 3
+  m_FogDensity: 0.01
+  m_LinearFogStart: 0
+  m_LinearFogEnd: 300
+  m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
+  m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
+  m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
+  m_AmbientIntensity: 1
+  m_AmbientMode: 0
+  m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
+  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_HaloStrength: 0.5
+  m_FlareStrength: 1
+  m_FlareFadeSpeed: 3
+  m_HaloTexture: {fileID: 0}
+  m_SpotCookie: {fileID: 10001, guid: 0000000000000000e000000000000000, type: 0}
+  m_DefaultReflectionMode: 0
+  m_DefaultReflectionResolution: 128
+  m_ReflectionBounces: 1
+  m_ReflectionIntensity: 1
+  m_CustomReflection: {fileID: 0}
+  m_Sun: {fileID: 0}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_UseRadianceAmbientProbe: 0
+--- !u!157 &3
+LightmapSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 11
+  m_GIWorkflowMode: 0
+  m_GISettings:
+    serializedVersion: 2
+    m_BounceScale: 1
+    m_IndirectOutputScale: 1
+    m_AlbedoBoost: 1
+    m_TemporalCoherenceThreshold: 1
+    m_EnvironmentLightingMode: 0
+    m_EnableBakedLightmaps: 1
+    m_EnableRealtimeLightmaps: 0
+  m_LightmapEditorSettings:
+    serializedVersion: 10
+    m_Resolution: 2
+    m_BakeResolution: 10
+    m_AtlasSize: 512
+    m_AO: 0
+    m_AOMaxDistance: 1
+    m_CompAOExponent: 1
+    m_CompAOExponentDirect: 0
+    m_Padding: 2
+    m_LightmapParameters: {fileID: 0}
+    m_LightmapsBakeMode: 1
+    m_TextureCompression: 1
+    m_FinalGather: 0
+    m_FinalGatherFiltering: 1
+    m_FinalGatherRayCount: 256
+    m_ReflectionCompression: 2
+    m_MixedBakeMode: 2
+    m_BakeBackend: 1
+    m_PVRSampling: 1
+    m_PVRDirectSampleCount: 32
+    m_PVRSampleCount: 256
+    m_PVRBounces: 2
+    m_PVRFilterTypeDirect: 0
+    m_PVRFilterTypeIndirect: 0
+    m_PVRFilterTypeAO: 0
+    m_PVRFilteringMode: 1
+    m_PVRCulling: 1
+    m_PVRFilteringGaussRadiusDirect: 1
+    m_PVRFilteringGaussRadiusIndirect: 5
+    m_PVRFilteringGaussRadiusAO: 2
+    m_PVRFilteringAtrousPositionSigmaDirect: 0.5
+    m_PVRFilteringAtrousPositionSigmaIndirect: 2
+    m_PVRFilteringAtrousPositionSigmaAO: 1
+    m_ShowResolutionOverlay: 1
+  m_LightingDataAsset: {fileID: 0}
+  m_UseShadowmask: 1
+--- !u!196 &4
+NavMeshSettings:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_BuildSettings:
+    serializedVersion: 2
+    agentTypeID: 0
+    agentRadius: 0.5
+    agentHeight: 2
+    agentSlope: 45
+    agentClimb: 0.4
+    ledgeDropHeight: 0
+    maxJumpAcrossDistance: 0
+    minRegionArea: 2
+    manualCellSize: 0
+    cellSize: 0.16666667
+    manualTileSize: 0
+    tileSize: 256
+    accuratePlacement: 0
+    debug:
+      m_Flags: 0
+  m_NavMeshData: {fileID: 0}
+--- !u!1 &170076733
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 170076735}
+  - component: {fileID: 170076734}
+  m_Layer: 0
+  m_Name: Directional Light
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!108 &170076734
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 170076733}
+  m_Enabled: 1
+  serializedVersion: 8
+  m_Type: 1
+  m_Color: {r: 0.9811321, g: 0.9811321, b: 0.9811321, a: 1}
+  m_Intensity: 1
+  m_Range: 10
+  m_SpotAngle: 30
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
+--- !u!4 &170076735
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 170076733}
+  m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
+  m_LocalPosition: {x: 0, y: 3, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1 &195301994
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 195301997}
+  - component: {fileID: 195301996}
+  - component: {fileID: 195301995}
+  m_Layer: 0
+  m_Name: RuntimeGas.0
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!23 &195301995
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 195301994}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
+  m_Materials:
+  - {fileID: 2100000, guid: d5b1cd9a4645040448c524ccb089b86e, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &195301996
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 195301994}
+  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &195301997
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 195301994}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &655979118
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 655979121}
+  - component: {fileID: 655979120}
+  - component: {fileID: 655979119}
+  m_Layer: 0
+  m_Name: GasBox.0
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!23 &655979119
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 655979118}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
+  m_Materials:
+  - {fileID: 2100000, guid: d5b1cd9a4645040448c524ccb089b86e, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &655979120
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 655979118}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &655979121
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 655979118}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 4, y: 8, z: 4}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &691812193
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 691812198}
+  - component: {fileID: 691812197}
+  - component: {fileID: 691812196}
+  - component: {fileID: 691812195}
+  - component: {fileID: 691812194}
+  m_Layer: 10
+  m_Name: WallE
+  m_TagString: Cube
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!54 &691812194
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 691812193}
+  serializedVersion: 2
+  m_Mass: 0.0000001
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 2
+--- !u!65 &691812195
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 691812193}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &691812196
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 691812193}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
+  m_Materials:
+  - {fileID: 2100000, guid: 06d6d0cf88be8814996b611f63520d5b, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &691812197
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 691812193}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &691812198
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 691812193}
+  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: 6, y: 13.36, z: 0}
+  m_LocalScale: {x: 13, y: 0, z: 12}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+--- !u!1 &708951005
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 708951009}
+  - component: {fileID: 708951008}
+  - component: {fileID: 708951007}
+  - component: {fileID: 708951006}
+  - component: {fileID: 708951010}
+  m_Layer: 10
+  m_Name: Roof
+  m_TagString: Cube
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &708951006
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 708951005}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &708951007
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 708951005}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
+  m_Materials:
+  - {fileID: 2100000, guid: 06d6d0cf88be8814996b611f63520d5b, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &708951008
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 708951005}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &708951009
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 708951005}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 19.86, z: 0}
+  m_LocalScale: {x: 12, y: 0, z: 12}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &708951010
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 708951005}
+  serializedVersion: 2
+  m_Mass: 0.0000001
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 2
+--- !u!1 &722011149
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 722011153}
+  - component: {fileID: 722011152}
+  - component: {fileID: 722011151}
+  - component: {fileID: 722011150}
+  m_Layer: 0
+  m_Name: Gas
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &722011150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 722011149}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 311c269388287ae4db0bd6b64b3c245b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  areaGasObject: {fileID: 1288382277436304, guid: 17f9f15d151d4754598df0d42fa598e9,
+    type: 2}
+  areaPool: []
+  placedAreas: []
+  emptyColor: {r: 0.39, g: 0.39, b: 0.39, a: 0.59}
+  denseColor: {r: 1, g: 0, b: 0, a: 0.59}
+  amountOfAreaPool: 1
+  areaRadius: 10
+  staticAreaMode: 0
+  placedAreaMode: 0
+--- !u!114 &722011151
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 722011149}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8d1db4d4331ce34185c8335d87feb83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeStep: 0.06666667014360428
+  numberOfIterations: 1
+  simulationMode: 1
+  simulationDistance: 100
+  radius: 0.25
+  spawnRate: 0.5
+  fluids:
+  - gameObject: {fileID: 0}
+    position:
+      x: 0
+      y: 0
+      z: 0
+    bounds:
+      positions:
+      - x: -1.75
+        y: -3.75
+        z: -1.75
+      - x: -1.25
+        y: -3.75
+        z: -1.75
+      - x: -0.75
+        y: -3.75
+        z: -1.75
+      - x: -0.25
+        y: -3.75
+        z: -1.75
+      - x: 0.25
+        y: -3.75
+        z: -1.75
+      - x: 0.75
+        y: -3.75
+        z: -1.75
+      - x: 1.25
+        y: -3.75
+        z: -1.75
+      - x: 1.75
+        y: -3.75
+        z: -1.75
+      - x: -1.75
+        y: -3.25
+        z: -1.75
+      - x: -1.25
+        y: -3.25
+        z: -1.75
+      - x: -0.75
+        y: -3.25
+        z: -1.75
+      - x: -0.25
+        y: -3.25
+        z: -1.75
+      - x: 0.25
+        y: -3.25
+        z: -1.75
+      - x: 0.75
+        y: -3.25
+        z: -1.75
+      - x: 1.25
+        y: -3.25
+        z: -1.75
+      - x: 1.75
+        y: -3.25
+        z: -1.75
+      - x: -1.75
+        y: -2.75
+        z: -1.75
+      - x: -1.25
+        y: -2.75
+        z: -1.75
+      - x: -0.75
+        y: -2.75
+        z: -1.75
+      - x: -0.25
+        y: -2.75
+        z: -1.75
+      - x: 0.25
+        y: -2.75
+        z: -1.75
+      - x: 0.75
+        y: -2.75
+        z: -1.75
+      - x: 1.25
+        y: -2.75
+        z: -1.75
+      - x: 1.75
+        y: -2.75
+        z: -1.75
+      - x: -1.75
+        y: -2.25
+        z: -1.75
+      - x: -1.25
+        y: -2.25
+        z: -1.75
+      - x: -0.75
+        y: -2.25
+        z: -1.75
+      - x: -0.25
+        y: -2.25
+        z: -1.75
+      - x: 0.25
+        y: -2.25
+        z: -1.75
+      - x: 0.75
+        y: -2.25
+        z: -1.75
+      - x: 1.25
+        y: -2.25
+        z: -1.75
+      - x: 1.75
+        y: -2.25
+        z: -1.75
+      - x: -1.75
+        y: -1.75
+        z: -1.75
+      - x: -1.25
+        y: -1.75
+        z: -1.75
+      - x: -0.75
+        y: -1.75
+        z: -1.75
+      - x: -0.25
+        y: -1.75
+        z: -1.75
+      - x: 0.25
+        y: -1.75
+        z: -1.75
+      - x: 0.75
+        y: -1.75
+        z: -1.75
+      - x: 1.25
+        y: -1.75
+        z: -1.75
+      - x: 1.75
+        y: -1.75
+        z: -1.75
+      - x: -1.75
+        y: -1.25
+        z: -1.75
+      - x: -1.25
+        y: -1.25
+        z: -1.75
+      - x: -0.75
+        y: -1.25
+        z: -1.75
+      - x: -0.25
+        y: -1.25
+        z: -1.75
+      - x: 0.25
+        y: -1.25
+        z: -1.75
+      - x: 0.75
+        y: -1.25
+        z: -1.75
+      - x: 1.25
+        y: -1.25
+        z: -1.75
+      - x: 1.75
+        y: -1.25
+        z: -1.75
+      - x: -1.75
+        y: -0.75
+        z: -1.75
+      - x: -1.25
+        y: -0.75
+        z: -1.75
+      - x: -0.75
+        y: -0.75
+        z: -1.75
+      - x: -0.25
+        y: -0.75
+        z: -1.75
+      - x: 0.25
+        y: -0.75
+        z: -1.75
+      - x: 0.75
+        y: -0.75
+        z: -1.75
+      - x: 1.25
+        y: -0.75
+        z: -1.75
+      - x: 1.75
+        y: -0.75
+        z: -1.75
+      - x: -1.75
+        y: -0.25
+        z: -1.75
+      - x: -1.25
+        y: -0.25
+        z: -1.75
+      - x: -0.75
+        y: -0.25
+        z: -1.75
+      - x: -0.25
+        y: -0.25
+        z: -1.75
+      - x: 0.25
+        y: -0.25
+        z: -1.75
+      - x: 0.75
+        y: -0.25
+        z: -1.75
+      - x: 1.25
+        y: -0.25
+        z: -1.75
+      - x: 1.75
+        y: -0.25
+        z: -1.75
+      - x: -1.75
+        y: 0.25
+        z: -1.75
+      - x: -1.25
+        y: 0.25
+        z: -1.75
+      - x: -0.75
+        y: 0.25
+        z: -1.75
+      - x: -0.25
+        y: 0.25
+        z: -1.75
+      - x: 0.25
+        y: 0.25
+        z: -1.75
+      - x: 0.75
+        y: 0.25
+        z: -1.75
+      - x: 1.25
+        y: 0.25
+        z: -1.75
+      - x: 1.75
+        y: 0.25
+        z: -1.75
+      - x: -1.75
+        y: 0.75
+        z: -1.75
+      - x: -1.25
+        y: 0.75
+        z: -1.75
+      - x: -0.75
+        y: 0.75
+        z: -1.75
+      - x: -0.25
+        y: 0.75
+        z: -1.75
+      - x: 0.25
+        y: 0.75
+        z: -1.75
+      - x: 0.75
+        y: 0.75
+        z: -1.75
+      - x: 1.25
+        y: 0.75
+        z: -1.75
+      - x: 1.75
+        y: 0.75
+        z: -1.75
+      - x: -1.75
+        y: 1.25
+        z: -1.75
+      - x: -1.25
+        y: 1.25
+        z: -1.75
+      - x: -0.75
+        y: 1.25
+        z: -1.75
+      - x: -0.25
+        y: 1.25
+        z: -1.75
+      - x: 0.25
+        y: 1.25
+        z: -1.75
+      - x: 0.75
+        y: 1.25
+        z: -1.75
+      - x: 1.25
+        y: 1.25
+        z: -1.75
+      - x: 1.75
+        y: 1.25
+        z: -1.75
+      - x: -1.75
+        y: 1.75
+        z: -1.75
+      - x: -1.25
+        y: 1.75
+        z: -1.75
+      - x: -0.75
+        y: 1.75
+        z: -1.75
+      - x: -0.25
+        y: 1.75
+        z: -1.75
+      - x: 0.25
+        y: 1.75
+        z: -1.75
+      - x: 0.75
+        y: 1.75
+        z: -1.75
+      - x: 1.25
+        y: 1.75
+        z: -1.75
+      - x: 1.75
+        y: 1.75
+        z: -1.75
+      - x: -1.75
+        y: 2.25
+        z: -1.75
+      - x: -1.25
+        y: 2.25
+        z: -1.75
+      - x: -0.75
+        y: 2.25
+        z: -1.75
+      - x: -0.25
+        y: 2.25
+        z: -1.75
+      - x: 0.25
+        y: 2.25
+        z: -1.75
+      - x: 0.75
+        y: 2.25
+        z: -1.75
+      - x: 1.25
+        y: 2.25
+        z: -1.75
+      - x: 1.75
+        y: 2.25
+        z: -1.75
+      - x: -1.75
+        y: 2.75
+        z: -1.75
+      - x: -1.25
+        y: 2.75
+        z: -1.75
+      - x: -0.75
+        y: 2.75
+        z: -1.75
+      - x: -0.25
+        y: 2.75
+        z: -1.75
+      - x: 0.25
+        y: 2.75
+        z: -1.75
+      - x: 0.75
+        y: 2.75
+        z: -1.75
+      - x: 1.25
+        y: 2.75
+        z: -1.75
+      - x: 1.75
+        y: 2.75
+        z: -1.75
+      - x: -1.75
+        y: 3.25
+        z: -1.75
+      - x: -1.25
+        y: 3.25
+        z: -1.75
+      - x: -0.75
+        y: 3.25
+        z: -1.75
+      - x: -0.25
+        y: 3.25
+        z: -1.75
+      - x: 0.25
+        y: 3.25
+        z: -1.75
+      - x: 0.75
+        y: 3.25
+        z: -1.75
+      - x: 1.25
+        y: 3.25
+        z: -1.75
+      - x: 1.75
+        y: 3.25
+        z: -1.75
+      - x: -1.75
+        y: 3.75
+        z: -1.75
+      - x: -1.25
+        y: 3.75
+        z: -1.75
+      - x: -0.75
+        y: 3.75
+        z: -1.75
+      - x: -0.25
+        y: 3.75
+        z: -1.75
+      - x: 0.25
+        y: 3.75
+        z: -1.75
+      - x: 0.75
+        y: 3.75
+        z: -1.75
+      - x: 1.25
+        y: 3.75
+        z: -1.75
+      - x: 1.75
+        y: 3.75
+        z: -1.75
+      - x: -1.75
+        y: -3.75
+        z: -1.25
+      - x: -1.25
+        y: -3.75
+        z: -1.25
+      - x: -0.75
+        y: -3.75
+        z: -1.25
+      - x: -0.25
+        y: -3.75
+        z: -1.25
+      - x: 0.25
+        y: -3.75
+        z: -1.25
+      - x: 0.75
+        y: -3.75
+        z: -1.25
+      - x: 1.25
+        y: -3.75
+        z: -1.25
+      - x: 1.75
+        y: -3.75
+        z: -1.25
+      - x: -1.75
+        y: -3.25
+        z: -1.25
+      - x: -1.25
+        y: -3.25
+        z: -1.25
+      - x: -0.75
+        y: -3.25
+        z: -1.25
+      - x: -0.25
+        y: -3.25
+        z: -1.25
+      - x: 0.25
+        y: -3.25
+        z: -1.25
+      - x: 0.75
+        y: -3.25
+        z: -1.25
+      - x: 1.25
+        y: -3.25
+        z: -1.25
+      - x: 1.75
+        y: -3.25
+        z: -1.25
+      - x: -1.75
+        y: -2.75
+        z: -1.25
+      - x: -1.25
+        y: -2.75
+        z: -1.25
+      - x: -0.75
+        y: -2.75
+        z: -1.25
+      - x: -0.25
+        y: -2.75
+        z: -1.25
+      - x: 0.25
+        y: -2.75
+        z: -1.25
+      - x: 0.75
+        y: -2.75
+        z: -1.25
+      - x: 1.25
+        y: -2.75
+        z: -1.25
+      - x: 1.75
+        y: -2.75
+        z: -1.25
+      - x: -1.75
+        y: -2.25
+        z: -1.25
+      - x: -1.25
+        y: -2.25
+        z: -1.25
+      - x: -0.75
+        y: -2.25
+        z: -1.25
+      - x: -0.25
+        y: -2.25
+        z: -1.25
+      - x: 0.25
+        y: -2.25
+        z: -1.25
+      - x: 0.75
+        y: -2.25
+        z: -1.25
+      - x: 1.25
+        y: -2.25
+        z: -1.25
+      - x: 1.75
+        y: -2.25
+        z: -1.25
+      - x: -1.75
+        y: -1.75
+        z: -1.25
+      - x: -1.25
+        y: -1.75
+        z: -1.25
+      - x: -0.75
+        y: -1.75
+        z: -1.25
+      - x: -0.25
+        y: -1.75
+        z: -1.25
+      - x: 0.25
+        y: -1.75
+        z: -1.25
+      - x: 0.75
+        y: -1.75
+        z: -1.25
+      - x: 1.25
+        y: -1.75
+        z: -1.25
+      - x: 1.75
+        y: -1.75
+        z: -1.25
+      - x: -1.75
+        y: -1.25
+        z: -1.25
+      - x: -1.25
+        y: -1.25
+        z: -1.25
+      - x: -0.75
+        y: -1.25
+        z: -1.25
+      - x: -0.25
+        y: -1.25
+        z: -1.25
+      - x: 0.25
+        y: -1.25
+        z: -1.25
+      - x: 0.75
+        y: -1.25
+        z: -1.25
+      - x: 1.25
+        y: -1.25
+        z: -1.25
+      - x: 1.75
+        y: -1.25
+        z: -1.25
+      - x: -1.75
+        y: -0.75
+        z: -1.25
+      - x: -1.25
+        y: -0.75
+        z: -1.25
+      - x: -0.75
+        y: -0.75
+        z: -1.25
+      - x: -0.25
+        y: -0.75
+        z: -1.25
+      - x: 0.25
+        y: -0.75
+        z: -1.25
+      - x: 0.75
+        y: -0.75
+        z: -1.25
+      - x: 1.25
+        y: -0.75
+        z: -1.25
+      - x: 1.75
+        y: -0.75
+        z: -1.25
+      - x: -1.75
+        y: -0.25
+        z: -1.25
+      - x: -1.25
+        y: -0.25
+        z: -1.25
+      - x: -0.75
+        y: -0.25
+        z: -1.25
+      - x: -0.25
+        y: -0.25
+        z: -1.25
+      - x: 0.25
+        y: -0.25
+        z: -1.25
+      - x: 0.75
+        y: -0.25
+        z: -1.25
+      - x: 1.25
+        y: -0.25
+        z: -1.25
+      - x: 1.75
+        y: -0.25
+        z: -1.25
+      - x: -1.75
+        y: 0.25
+        z: -1.25
+      - x: -1.25
+        y: 0.25
+        z: -1.25
+      - x: -0.75
+        y: 0.25
+        z: -1.25
+      - x: -0.25
+        y: 0.25
+        z: -1.25
+      - x: 0.25
+        y: 0.25
+        z: -1.25
+      - x: 0.75
+        y: 0.25
+        z: -1.25
+      - x: 1.25
+        y: 0.25
+        z: -1.25
+      - x: 1.75
+        y: 0.25
+        z: -1.25
+      - x: -1.75
+        y: 0.75
+        z: -1.25
+      - x: -1.25
+        y: 0.75
+        z: -1.25
+      - x: -0.75
+        y: 0.75
+        z: -1.25
+      - x: -0.25
+        y: 0.75
+        z: -1.25
+      - x: 0.25
+        y: 0.75
+        z: -1.25
+      - x: 0.75
+        y: 0.75
+        z: -1.25
+      - x: 1.25
+        y: 0.75
+        z: -1.25
+      - x: 1.75
+        y: 0.75
+        z: -1.25
+      - x: -1.75
+        y: 1.25
+        z: -1.25
+      - x: -1.25
+        y: 1.25
+        z: -1.25
+      - x: -0.75
+        y: 1.25
+        z: -1.25
+      - x: -0.25
+        y: 1.25
+        z: -1.25
+      - x: 0.25
+        y: 1.25
+        z: -1.25
+      - x: 0.75
+        y: 1.25
+        z: -1.25
+      - x: 1.25
+        y: 1.25
+        z: -1.25
+      - x: 1.75
+        y: 1.25
+        z: -1.25
+      - x: -1.75
+        y: 1.75
+        z: -1.25
+      - x: -1.25
+        y: 1.75
+        z: -1.25
+      - x: -0.75
+        y: 1.75
+        z: -1.25
+      - x: -0.25
+        y: 1.75
+        z: -1.25
+      - x: 0.25
+        y: 1.75
+        z: -1.25
+      - x: 0.75
+        y: 1.75
+        z: -1.25
+      - x: 1.25
+        y: 1.75
+        z: -1.25
+      - x: 1.75
+        y: 1.75
+        z: -1.25
+      - x: -1.75
+        y: 2.25
+        z: -1.25
+      - x: -1.25
+        y: 2.25
+        z: -1.25
+      - x: -0.75
+        y: 2.25
+        z: -1.25
+      - x: -0.25
+        y: 2.25
+        z: -1.25
+      - x: 0.25
+        y: 2.25
+        z: -1.25
+      - x: 0.75
+        y: 2.25
+        z: -1.25
+      - x: 1.25
+        y: 2.25
+        z: -1.25
+      - x: 1.75
+        y: 2.25
+        z: -1.25
+      - x: -1.75
+        y: 2.75
+        z: -1.25
+      - x: -1.25
+        y: 2.75
+        z: -1.25
+      - x: -0.75
+        y: 2.75
+        z: -1.25
+      - x: -0.25
+        y: 2.75
+        z: -1.25
+      - x: 0.25
+        y: 2.75
+        z: -1.25
+      - x: 0.75
+        y: 2.75
+        z: -1.25
+      - x: 1.25
+        y: 2.75
+        z: -1.25
+      - x: 1.75
+        y: 2.75
+        z: -1.25
+      - x: -1.75
+        y: 3.25
+        z: -1.25
+      - x: -1.25
+        y: 3.25
+        z: -1.25
+      - x: -0.75
+        y: 3.25
+        z: -1.25
+      - x: -0.25
+        y: 3.25
+        z: -1.25
+      - x: 0.25
+        y: 3.25
+        z: -1.25
+      - x: 0.75
+        y: 3.25
+        z: -1.25
+      - x: 1.25
+        y: 3.25
+        z: -1.25
+      - x: 1.75
+        y: 3.25
+        z: -1.25
+      - x: -1.75
+        y: 3.75
+        z: -1.25
+      - x: -1.25
+        y: 3.75
+        z: -1.25
+      - x: -0.75
+        y: 3.75
+        z: -1.25
+      - x: -0.25
+        y: 3.75
+        z: -1.25
+      - x: 0.25
+        y: 3.75
+        z: -1.25
+      - x: 0.75
+        y: 3.75
+        z: -1.25
+      - x: 1.25
+        y: 3.75
+        z: -1.25
+      - x: 1.75
+        y: 3.75
+        z: -1.25
+      - x: -1.75
+        y: -3.75
+        z: -0.75
+      - x: -1.25
+        y: -3.75
+        z: -0.75
+      - x: -0.75
+        y: -3.75
+        z: -0.75
+      - x: -0.25
+        y: -3.75
+        z: -0.75
+      - x: 0.25
+        y: -3.75
+        z: -0.75
+      - x: 0.75
+        y: -3.75
+        z: -0.75
+      - x: 1.25
+        y: -3.75
+        z: -0.75
+      - x: 1.75
+        y: -3.75
+        z: -0.75
+      - x: -1.75
+        y: -3.25
+        z: -0.75
+      - x: -1.25
+        y: -3.25
+        z: -0.75
+      - x: -0.75
+        y: -3.25
+        z: -0.75
+      - x: -0.25
+        y: -3.25
+        z: -0.75
+      - x: 0.25
+        y: -3.25
+        z: -0.75
+      - x: 0.75
+        y: -3.25
+        z: -0.75
+      - x: 1.25
+        y: -3.25
+        z: -0.75
+      - x: 1.75
+        y: -3.25
+        z: -0.75
+      - x: -1.75
+        y: -2.75
+        z: -0.75
+      - x: -1.25
+        y: -2.75
+        z: -0.75
+      - x: -0.75
+        y: -2.75
+        z: -0.75
+      - x: -0.25
+        y: -2.75
+        z: -0.75
+      - x: 0.25
+        y: -2.75
+        z: -0.75
+      - x: 0.75
+        y: -2.75
+        z: -0.75
+      - x: 1.25
+        y: -2.75
+        z: -0.75
+      - x: 1.75
+        y: -2.75
+        z: -0.75
+      - x: -1.75
+        y: -2.25
+        z: -0.75
+      - x: -1.25
+        y: -2.25
+        z: -0.75
+      - x: -0.75
+        y: -2.25
+        z: -0.75
+      - x: -0.25
+        y: -2.25
+        z: -0.75
+      - x: 0.25
+        y: -2.25
+        z: -0.75
+      - x: 0.75
+        y: -2.25
+        z: -0.75
+      - x: 1.25
+        y: -2.25
+        z: -0.75
+      - x: 1.75
+        y: -2.25
+        z: -0.75
+      - x: -1.75
+        y: -1.75
+        z: -0.75
+      - x: -1.25
+        y: -1.75
+        z: -0.75
+      - x: -0.75
+        y: -1.75
+        z: -0.75
+      - x: -0.25
+        y: -1.75
+        z: -0.75
+      - x: 0.25
+        y: -1.75
+        z: -0.75
+      - x: 0.75
+        y: -1.75
+        z: -0.75
+      - x: 1.25
+        y: -1.75
+        z: -0.75
+      - x: 1.75
+        y: -1.75
+        z: -0.75
+      - x: -1.75
+        y: -1.25
+        z: -0.75
+      - x: -1.25
+        y: -1.25
+        z: -0.75
+      - x: -0.75
+        y: -1.25
+        z: -0.75
+      - x: -0.25
+        y: -1.25
+        z: -0.75
+      - x: 0.25
+        y: -1.25
+        z: -0.75
+      - x: 0.75
+        y: -1.25
+        z: -0.75
+      - x: 1.25
+        y: -1.25
+        z: -0.75
+      - x: 1.75
+        y: -1.25
+        z: -0.75
+      - x: -1.75
+        y: -0.75
+        z: -0.75
+      - x: -1.25
+        y: -0.75
+        z: -0.75
+      - x: -0.75
+        y: -0.75
+        z: -0.75
+      - x: -0.25
+        y: -0.75
+        z: -0.75
+      - x: 0.25
+        y: -0.75
+        z: -0.75
+      - x: 0.75
+        y: -0.75
+        z: -0.75
+      - x: 1.25
+        y: -0.75
+        z: -0.75
+      - x: 1.75
+        y: -0.75
+        z: -0.75
+      - x: -1.75
+        y: -0.25
+        z: -0.75
+      - x: -1.25
+        y: -0.25
+        z: -0.75
+      - x: -0.75
+        y: -0.25
+        z: -0.75
+      - x: -0.25
+        y: -0.25
+        z: -0.75
+      - x: 0.25
+        y: -0.25
+        z: -0.75
+      - x: 0.75
+        y: -0.25
+        z: -0.75
+      - x: 1.25
+        y: -0.25
+        z: -0.75
+      - x: 1.75
+        y: -0.25
+        z: -0.75
+      - x: -1.75
+        y: 0.25
+        z: -0.75
+      - x: -1.25
+        y: 0.25
+        z: -0.75
+      - x: -0.75
+        y: 0.25
+        z: -0.75
+      - x: -0.25
+        y: 0.25
+        z: -0.75
+      - x: 0.25
+        y: 0.25
+        z: -0.75
+      - x: 0.75
+        y: 0.25
+        z: -0.75
+      - x: 1.25
+        y: 0.25
+        z: -0.75
+      - x: 1.75
+        y: 0.25
+        z: -0.75
+      - x: -1.75
+        y: 0.75
+        z: -0.75
+      - x: -1.25
+        y: 0.75
+        z: -0.75
+      - x: -0.75
+        y: 0.75
+        z: -0.75
+      - x: -0.25
+        y: 0.75
+        z: -0.75
+      - x: 0.25
+        y: 0.75
+        z: -0.75
+      - x: 0.75
+        y: 0.75
+        z: -0.75
+      - x: 1.25
+        y: 0.75
+        z: -0.75
+      - x: 1.75
+        y: 0.75
+        z: -0.75
+      - x: -1.75
+        y: 1.25
+        z: -0.75
+      - x: -1.25
+        y: 1.25
+        z: -0.75
+      - x: -0.75
+        y: 1.25
+        z: -0.75
+      - x: -0.25
+        y: 1.25
+        z: -0.75
+      - x: 0.25
+        y: 1.25
+        z: -0.75
+      - x: 0.75
+        y: 1.25
+        z: -0.75
+      - x: 1.25
+        y: 1.25
+        z: -0.75
+      - x: 1.75
+        y: 1.25
+        z: -0.75
+      - x: -1.75
+        y: 1.75
+        z: -0.75
+      - x: -1.25
+        y: 1.75
+        z: -0.75
+      - x: -0.75
+        y: 1.75
+        z: -0.75
+      - x: -0.25
+        y: 1.75
+        z: -0.75
+      - x: 0.25
+        y: 1.75
+        z: -0.75
+      - x: 0.75
+        y: 1.75
+        z: -0.75
+      - x: 1.25
+        y: 1.75
+        z: -0.75
+      - x: 1.75
+        y: 1.75
+        z: -0.75
+      - x: -1.75
+        y: 2.25
+        z: -0.75
+      - x: -1.25
+        y: 2.25
+        z: -0.75
+      - x: -0.75
+        y: 2.25
+        z: -0.75
+      - x: -0.25
+        y: 2.25
+        z: -0.75
+      - x: 0.25
+        y: 2.25
+        z: -0.75
+      - x: 0.75
+        y: 2.25
+        z: -0.75
+      - x: 1.25
+        y: 2.25
+        z: -0.75
+      - x: 1.75
+        y: 2.25
+        z: -0.75
+      - x: -1.75
+        y: 2.75
+        z: -0.75
+      - x: -1.25
+        y: 2.75
+        z: -0.75
+      - x: -0.75
+        y: 2.75
+        z: -0.75
+      - x: -0.25
+        y: 2.75
+        z: -0.75
+      - x: 0.25
+        y: 2.75
+        z: -0.75
+      - x: 0.75
+        y: 2.75
+        z: -0.75
+      - x: 1.25
+        y: 2.75
+        z: -0.75
+      - x: 1.75
+        y: 2.75
+        z: -0.75
+      - x: -1.75
+        y: 3.25
+        z: -0.75
+      - x: -1.25
+        y: 3.25
+        z: -0.75
+      - x: -0.75
+        y: 3.25
+        z: -0.75
+      - x: -0.25
+        y: 3.25
+        z: -0.75
+      - x: 0.25
+        y: 3.25
+        z: -0.75
+      - x: 0.75
+        y: 3.25
+        z: -0.75
+      - x: 1.25
+        y: 3.25
+        z: -0.75
+      - x: 1.75
+        y: 3.25
+        z: -0.75
+      - x: -1.75
+        y: 3.75
+        z: -0.75
+      - x: -1.25
+        y: 3.75
+        z: -0.75
+      - x: -0.75
+        y: 3.75
+        z: -0.75
+      - x: -0.25
+        y: 3.75
+        z: -0.75
+      - x: 0.25
+        y: 3.75
+        z: -0.75
+      - x: 0.75
+        y: 3.75
+        z: -0.75
+      - x: 1.25
+        y: 3.75
+        z: -0.75
+      - x: 1.75
+        y: 3.75
+        z: -0.75
+      - x: -1.75
+        y: -3.75
+        z: -0.25
+      - x: -1.25
+        y: -3.75
+        z: -0.25
+      - x: -0.75
+        y: -3.75
+        z: -0.25
+      - x: -0.25
+        y: -3.75
+        z: -0.25
+      - x: 0.25
+        y: -3.75
+        z: -0.25
+      - x: 0.75
+        y: -3.75
+        z: -0.25
+      - x: 1.25
+        y: -3.75
+        z: -0.25
+      - x: 1.75
+        y: -3.75
+        z: -0.25
+      - x: -1.75
+        y: -3.25
+        z: -0.25
+      - x: -1.25
+        y: -3.25
+        z: -0.25
+      - x: -0.75
+        y: -3.25
+        z: -0.25
+      - x: -0.25
+        y: -3.25
+        z: -0.25
+      - x: 0.25
+        y: -3.25
+        z: -0.25
+      - x: 0.75
+        y: -3.25
+        z: -0.25
+      - x: 1.25
+        y: -3.25
+        z: -0.25
+      - x: 1.75
+        y: -3.25
+        z: -0.25
+      - x: -1.75
+        y: -2.75
+        z: -0.25
+      - x: -1.25
+        y: -2.75
+        z: -0.25
+      - x: -0.75
+        y: -2.75
+        z: -0.25
+      - x: -0.25
+        y: -2.75
+        z: -0.25
+      - x: 0.25
+        y: -2.75
+        z: -0.25
+      - x: 0.75
+        y: -2.75
+        z: -0.25
+      - x: 1.25
+        y: -2.75
+        z: -0.25
+      - x: 1.75
+        y: -2.75
+        z: -0.25
+      - x: -1.75
+        y: -2.25
+        z: -0.25
+      - x: -1.25
+        y: -2.25
+        z: -0.25
+      - x: -0.75
+        y: -2.25
+        z: -0.25
+      - x: -0.25
+        y: -2.25
+        z: -0.25
+      - x: 0.25
+        y: -2.25
+        z: -0.25
+      - x: 0.75
+        y: -2.25
+        z: -0.25
+      - x: 1.25
+        y: -2.25
+        z: -0.25
+      - x: 1.75
+        y: -2.25
+        z: -0.25
+      - x: -1.75
+        y: -1.75
+        z: -0.25
+      - x: -1.25
+        y: -1.75
+        z: -0.25
+      - x: -0.75
+        y: -1.75
+        z: -0.25
+      - x: -0.25
+        y: -1.75
+        z: -0.25
+      - x: 0.25
+        y: -1.75
+        z: -0.25
+      - x: 0.75
+        y: -1.75
+        z: -0.25
+      - x: 1.25
+        y: -1.75
+        z: -0.25
+      - x: 1.75
+        y: -1.75
+        z: -0.25
+      - x: -1.75
+        y: -1.25
+        z: -0.25
+      - x: -1.25
+        y: -1.25
+        z: -0.25
+      - x: -0.75
+        y: -1.25
+        z: -0.25
+      - x: -0.25
+        y: -1.25
+        z: -0.25
+      - x: 0.25
+        y: -1.25
+        z: -0.25
+      - x: 0.75
+        y: -1.25
+        z: -0.25
+      - x: 1.25
+        y: -1.25
+        z: -0.25
+      - x: 1.75
+        y: -1.25
+        z: -0.25
+      - x: -1.75
+        y: -0.75
+        z: -0.25
+      - x: -1.25
+        y: -0.75
+        z: -0.25
+      - x: -0.75
+        y: -0.75
+        z: -0.25
+      - x: -0.25
+        y: -0.75
+        z: -0.25
+      - x: 0.25
+        y: -0.75
+        z: -0.25
+      - x: 0.75
+        y: -0.75
+        z: -0.25
+      - x: 1.25
+        y: -0.75
+        z: -0.25
+      - x: 1.75
+        y: -0.75
+        z: -0.25
+      - x: -1.75
+        y: -0.25
+        z: -0.25
+      - x: -1.25
+        y: -0.25
+        z: -0.25
+      - x: -0.75
+        y: -0.25
+        z: -0.25
+      - x: -0.25
+        y: -0.25
+        z: -0.25
+      - x: 0.25
+        y: -0.25
+        z: -0.25
+      - x: 0.75
+        y: -0.25
+        z: -0.25
+      - x: 1.25
+        y: -0.25
+        z: -0.25
+      - x: 1.75
+        y: -0.25
+        z: -0.25
+      - x: -1.75
+        y: 0.25
+        z: -0.25
+      - x: -1.25
+        y: 0.25
+        z: -0.25
+      - x: -0.75
+        y: 0.25
+        z: -0.25
+      - x: -0.25
+        y: 0.25
+        z: -0.25
+      - x: 0.25
+        y: 0.25
+        z: -0.25
+      - x: 0.75
+        y: 0.25
+        z: -0.25
+      - x: 1.25
+        y: 0.25
+        z: -0.25
+      - x: 1.75
+        y: 0.25
+        z: -0.25
+      - x: -1.75
+        y: 0.75
+        z: -0.25
+      - x: -1.25
+        y: 0.75
+        z: -0.25
+      - x: -0.75
+        y: 0.75
+        z: -0.25
+      - x: -0.25
+        y: 0.75
+        z: -0.25
+      - x: 0.25
+        y: 0.75
+        z: -0.25
+      - x: 0.75
+        y: 0.75
+        z: -0.25
+      - x: 1.25
+        y: 0.75
+        z: -0.25
+      - x: 1.75
+        y: 0.75
+        z: -0.25
+      - x: -1.75
+        y: 1.25
+        z: -0.25
+      - x: -1.25
+        y: 1.25
+        z: -0.25
+      - x: -0.75
+        y: 1.25
+        z: -0.25
+      - x: -0.25
+        y: 1.25
+        z: -0.25
+      - x: 0.25
+        y: 1.25
+        z: -0.25
+      - x: 0.75
+        y: 1.25
+        z: -0.25
+      - x: 1.25
+        y: 1.25
+        z: -0.25
+      - x: 1.75
+        y: 1.25
+        z: -0.25
+      - x: -1.75
+        y: 1.75
+        z: -0.25
+      - x: -1.25
+        y: 1.75
+        z: -0.25
+      - x: -0.75
+        y: 1.75
+        z: -0.25
+      - x: -0.25
+        y: 1.75
+        z: -0.25
+      - x: 0.25
+        y: 1.75
+        z: -0.25
+      - x: 0.75
+        y: 1.75
+        z: -0.25
+      - x: 1.25
+        y: 1.75
+        z: -0.25
+      - x: 1.75
+        y: 1.75
+        z: -0.25
+      - x: -1.75
+        y: 2.25
+        z: -0.25
+      - x: -1.25
+        y: 2.25
+        z: -0.25
+      - x: -0.75
+        y: 2.25
+        z: -0.25
+      - x: -0.25
+        y: 2.25
+        z: -0.25
+      - x: 0.25
+        y: 2.25
+        z: -0.25
+      - x: 0.75
+        y: 2.25
+        z: -0.25
+      - x: 1.25
+        y: 2.25
+        z: -0.25
+      - x: 1.75
+        y: 2.25
+        z: -0.25
+      - x: -1.75
+        y: 2.75
+        z: -0.25
+      - x: -1.25
+        y: 2.75
+        z: -0.25
+      - x: -0.75
+        y: 2.75
+        z: -0.25
+      - x: -0.25
+        y: 2.75
+        z: -0.25
+      - x: 0.25
+        y: 2.75
+        z: -0.25
+      - x: 0.75
+        y: 2.75
+        z: -0.25
+      - x: 1.25
+        y: 2.75
+        z: -0.25
+      - x: 1.75
+        y: 2.75
+        z: -0.25
+      - x: -1.75
+        y: 3.25
+        z: -0.25
+      - x: -1.25
+        y: 3.25
+        z: -0.25
+      - x: -0.75
+        y: 3.25
+        z: -0.25
+      - x: -0.25
+        y: 3.25
+        z: -0.25
+      - x: 0.25
+        y: 3.25
+        z: -0.25
+      - x: 0.75
+        y: 3.25
+        z: -0.25
+      - x: 1.25
+        y: 3.25
+        z: -0.25
+      - x: 1.75
+        y: 3.25
+        z: -0.25
+      - x: -1.75
+        y: 3.75
+        z: -0.25
+      - x: -1.25
+        y: 3.75
+        z: -0.25
+      - x: -0.75
+        y: 3.75
+        z: -0.25
+      - x: -0.25
+        y: 3.75
+        z: -0.25
+      - x: 0.25
+        y: 3.75
+        z: -0.25
+      - x: 0.75
+        y: 3.75
+        z: -0.25
+      - x: 1.25
+        y: 3.75
+        z: -0.25
+      - x: 1.75
+        y: 3.75
+        z: -0.25
+      - x: -1.75
+        y: -3.75
+        z: 0.25
+      - x: -1.25
+        y: -3.75
+        z: 0.25
+      - x: -0.75
+        y: -3.75
+        z: 0.25
+      - x: -0.25
+        y: -3.75
+        z: 0.25
+      - x: 0.25
+        y: -3.75
+        z: 0.25
+      - x: 0.75
+        y: -3.75
+        z: 0.25
+      - x: 1.25
+        y: -3.75
+        z: 0.25
+      - x: 1.75
+        y: -3.75
+        z: 0.25
+      - x: -1.75
+        y: -3.25
+        z: 0.25
+      - x: -1.25
+        y: -3.25
+        z: 0.25
+      - x: -0.75
+        y: -3.25
+        z: 0.25
+      - x: -0.25
+        y: -3.25
+        z: 0.25
+      - x: 0.25
+        y: -3.25
+        z: 0.25
+      - x: 0.75
+        y: -3.25
+        z: 0.25
+      - x: 1.25
+        y: -3.25
+        z: 0.25
+      - x: 1.75
+        y: -3.25
+        z: 0.25
+      - x: -1.75
+        y: -2.75
+        z: 0.25
+      - x: -1.25
+        y: -2.75
+        z: 0.25
+      - x: -0.75
+        y: -2.75
+        z: 0.25
+      - x: -0.25
+        y: -2.75
+        z: 0.25
+      - x: 0.25
+        y: -2.75
+        z: 0.25
+      - x: 0.75
+        y: -2.75
+        z: 0.25
+      - x: 1.25
+        y: -2.75
+        z: 0.25
+      - x: 1.75
+        y: -2.75
+        z: 0.25
+      - x: -1.75
+        y: -2.25
+        z: 0.25
+      - x: -1.25
+        y: -2.25
+        z: 0.25
+      - x: -0.75
+        y: -2.25
+        z: 0.25
+      - x: -0.25
+        y: -2.25
+        z: 0.25
+      - x: 0.25
+        y: -2.25
+        z: 0.25
+      - x: 0.75
+        y: -2.25
+        z: 0.25
+      - x: 1.25
+        y: -2.25
+        z: 0.25
+      - x: 1.75
+        y: -2.25
+        z: 0.25
+      - x: -1.75
+        y: -1.75
+        z: 0.25
+      - x: -1.25
+        y: -1.75
+        z: 0.25
+      - x: -0.75
+        y: -1.75
+        z: 0.25
+      - x: -0.25
+        y: -1.75
+        z: 0.25
+      - x: 0.25
+        y: -1.75
+        z: 0.25
+      - x: 0.75
+        y: -1.75
+        z: 0.25
+      - x: 1.25
+        y: -1.75
+        z: 0.25
+      - x: 1.75
+        y: -1.75
+        z: 0.25
+      - x: -1.75
+        y: -1.25
+        z: 0.25
+      - x: -1.25
+        y: -1.25
+        z: 0.25
+      - x: -0.75
+        y: -1.25
+        z: 0.25
+      - x: -0.25
+        y: -1.25
+        z: 0.25
+      - x: 0.25
+        y: -1.25
+        z: 0.25
+      - x: 0.75
+        y: -1.25
+        z: 0.25
+      - x: 1.25
+        y: -1.25
+        z: 0.25
+      - x: 1.75
+        y: -1.25
+        z: 0.25
+      - x: -1.75
+        y: -0.75
+        z: 0.25
+      - x: -1.25
+        y: -0.75
+        z: 0.25
+      - x: -0.75
+        y: -0.75
+        z: 0.25
+      - x: -0.25
+        y: -0.75
+        z: 0.25
+      - x: 0.25
+        y: -0.75
+        z: 0.25
+      - x: 0.75
+        y: -0.75
+        z: 0.25
+      - x: 1.25
+        y: -0.75
+        z: 0.25
+      - x: 1.75
+        y: -0.75
+        z: 0.25
+      - x: -1.75
+        y: -0.25
+        z: 0.25
+      - x: -1.25
+        y: -0.25
+        z: 0.25
+      - x: -0.75
+        y: -0.25
+        z: 0.25
+      - x: -0.25
+        y: -0.25
+        z: 0.25
+      - x: 0.25
+        y: -0.25
+        z: 0.25
+      - x: 0.75
+        y: -0.25
+        z: 0.25
+      - x: 1.25
+        y: -0.25
+        z: 0.25
+      - x: 1.75
+        y: -0.25
+        z: 0.25
+      - x: -1.75
+        y: 0.25
+        z: 0.25
+      - x: -1.25
+        y: 0.25
+        z: 0.25
+      - x: -0.75
+        y: 0.25
+        z: 0.25
+      - x: -0.25
+        y: 0.25
+        z: 0.25
+      - x: 0.25
+        y: 0.25
+        z: 0.25
+      - x: 0.75
+        y: 0.25
+        z: 0.25
+      - x: 1.25
+        y: 0.25
+        z: 0.25
+      - x: 1.75
+        y: 0.25
+        z: 0.25
+      - x: -1.75
+        y: 0.75
+        z: 0.25
+      - x: -1.25
+        y: 0.75
+        z: 0.25
+      - x: -0.75
+        y: 0.75
+        z: 0.25
+      - x: -0.25
+        y: 0.75
+        z: 0.25
+      - x: 0.25
+        y: 0.75
+        z: 0.25
+      - x: 0.75
+        y: 0.75
+        z: 0.25
+      - x: 1.25
+        y: 0.75
+        z: 0.25
+      - x: 1.75
+        y: 0.75
+        z: 0.25
+      - x: -1.75
+        y: 1.25
+        z: 0.25
+      - x: -1.25
+        y: 1.25
+        z: 0.25
+      - x: -0.75
+        y: 1.25
+        z: 0.25
+      - x: -0.25
+        y: 1.25
+        z: 0.25
+      - x: 0.25
+        y: 1.25
+        z: 0.25
+      - x: 0.75
+        y: 1.25
+        z: 0.25
+      - x: 1.25
+        y: 1.25
+        z: 0.25
+      - x: 1.75
+        y: 1.25
+        z: 0.25
+      - x: -1.75
+        y: 1.75
+        z: 0.25
+      - x: -1.25
+        y: 1.75
+        z: 0.25
+      - x: -0.75
+        y: 1.75
+        z: 0.25
+      - x: -0.25
+        y: 1.75
+        z: 0.25
+      - x: 0.25
+        y: 1.75
+        z: 0.25
+      - x: 0.75
+        y: 1.75
+        z: 0.25
+      - x: 1.25
+        y: 1.75
+        z: 0.25
+      - x: 1.75
+        y: 1.75
+        z: 0.25
+      - x: -1.75
+        y: 2.25
+        z: 0.25
+      - x: -1.25
+        y: 2.25
+        z: 0.25
+      - x: -0.75
+        y: 2.25
+        z: 0.25
+      - x: -0.25
+        y: 2.25
+        z: 0.25
+      - x: 0.25
+        y: 2.25
+        z: 0.25
+      - x: 0.75
+        y: 2.25
+        z: 0.25
+      - x: 1.25
+        y: 2.25
+        z: 0.25
+      - x: 1.75
+        y: 2.25
+        z: 0.25
+      - x: -1.75
+        y: 2.75
+        z: 0.25
+      - x: -1.25
+        y: 2.75
+        z: 0.25
+      - x: -0.75
+        y: 2.75
+        z: 0.25
+      - x: -0.25
+        y: 2.75
+        z: 0.25
+      - x: 0.25
+        y: 2.75
+        z: 0.25
+      - x: 0.75
+        y: 2.75
+        z: 0.25
+      - x: 1.25
+        y: 2.75
+        z: 0.25
+      - x: 1.75
+        y: 2.75
+        z: 0.25
+      - x: -1.75
+        y: 3.25
+        z: 0.25
+      - x: -1.25
+        y: 3.25
+        z: 0.25
+      - x: -0.75
+        y: 3.25
+        z: 0.25
+      - x: -0.25
+        y: 3.25
+        z: 0.25
+      - x: 0.25
+        y: 3.25
+        z: 0.25
+      - x: 0.75
+        y: 3.25
+        z: 0.25
+      - x: 1.25
+        y: 3.25
+        z: 0.25
+      - x: 1.75
+        y: 3.25
+        z: 0.25
+      - x: -1.75
+        y: 3.75
+        z: 0.25
+      - x: -1.25
+        y: 3.75
+        z: 0.25
+      - x: -0.75
+        y: 3.75
+        z: 0.25
+      - x: -0.25
+        y: 3.75
+        z: 0.25
+      - x: 0.25
+        y: 3.75
+        z: 0.25
+      - x: 0.75
+        y: 3.75
+        z: 0.25
+      - x: 1.25
+        y: 3.75
+        z: 0.25
+      - x: 1.75
+        y: 3.75
+        z: 0.25
+      - x: -1.75
+        y: -3.75
+        z: 0.75
+      - x: -1.25
+        y: -3.75
+        z: 0.75
+      - x: -0.75
+        y: -3.75
+        z: 0.75
+      - x: -0.25
+        y: -3.75
+        z: 0.75
+      - x: 0.25
+        y: -3.75
+        z: 0.75
+      - x: 0.75
+        y: -3.75
+        z: 0.75
+      - x: 1.25
+        y: -3.75
+        z: 0.75
+      - x: 1.75
+        y: -3.75
+        z: 0.75
+      - x: -1.75
+        y: -3.25
+        z: 0.75
+      - x: -1.25
+        y: -3.25
+        z: 0.75
+      - x: -0.75
+        y: -3.25
+        z: 0.75
+      - x: -0.25
+        y: -3.25
+        z: 0.75
+      - x: 0.25
+        y: -3.25
+        z: 0.75
+      - x: 0.75
+        y: -3.25
+        z: 0.75
+      - x: 1.25
+        y: -3.25
+        z: 0.75
+      - x: 1.75
+        y: -3.25
+        z: 0.75
+      - x: -1.75
+        y: -2.75
+        z: 0.75
+      - x: -1.25
+        y: -2.75
+        z: 0.75
+      - x: -0.75
+        y: -2.75
+        z: 0.75
+      - x: -0.25
+        y: -2.75
+        z: 0.75
+      - x: 0.25
+        y: -2.75
+        z: 0.75
+      - x: 0.75
+        y: -2.75
+        z: 0.75
+      - x: 1.25
+        y: -2.75
+        z: 0.75
+      - x: 1.75
+        y: -2.75
+        z: 0.75
+      - x: -1.75
+        y: -2.25
+        z: 0.75
+      - x: -1.25
+        y: -2.25
+        z: 0.75
+      - x: -0.75
+        y: -2.25
+        z: 0.75
+      - x: -0.25
+        y: -2.25
+        z: 0.75
+      - x: 0.25
+        y: -2.25
+        z: 0.75
+      - x: 0.75
+        y: -2.25
+        z: 0.75
+      - x: 1.25
+        y: -2.25
+        z: 0.75
+      - x: 1.75
+        y: -2.25
+        z: 0.75
+      - x: -1.75
+        y: -1.75
+        z: 0.75
+      - x: -1.25
+        y: -1.75
+        z: 0.75
+      - x: -0.75
+        y: -1.75
+        z: 0.75
+      - x: -0.25
+        y: -1.75
+        z: 0.75
+      - x: 0.25
+        y: -1.75
+        z: 0.75
+      - x: 0.75
+        y: -1.75
+        z: 0.75
+      - x: 1.25
+        y: -1.75
+        z: 0.75
+      - x: 1.75
+        y: -1.75
+        z: 0.75
+      - x: -1.75
+        y: -1.25
+        z: 0.75
+      - x: -1.25
+        y: -1.25
+        z: 0.75
+      - x: -0.75
+        y: -1.25
+        z: 0.75
+      - x: -0.25
+        y: -1.25
+        z: 0.75
+      - x: 0.25
+        y: -1.25
+        z: 0.75
+      - x: 0.75
+        y: -1.25
+        z: 0.75
+      - x: 1.25
+        y: -1.25
+        z: 0.75
+      - x: 1.75
+        y: -1.25
+        z: 0.75
+      - x: -1.75
+        y: -0.75
+        z: 0.75
+      - x: -1.25
+        y: -0.75
+        z: 0.75
+      - x: -0.75
+        y: -0.75
+        z: 0.75
+      - x: -0.25
+        y: -0.75
+        z: 0.75
+      - x: 0.25
+        y: -0.75
+        z: 0.75
+      - x: 0.75
+        y: -0.75
+        z: 0.75
+      - x: 1.25
+        y: -0.75
+        z: 0.75
+      - x: 1.75
+        y: -0.75
+        z: 0.75
+      - x: -1.75
+        y: -0.25
+        z: 0.75
+      - x: -1.25
+        y: -0.25
+        z: 0.75
+      - x: -0.75
+        y: -0.25
+        z: 0.75
+      - x: -0.25
+        y: -0.25
+        z: 0.75
+      - x: 0.25
+        y: -0.25
+        z: 0.75
+      - x: 0.75
+        y: -0.25
+        z: 0.75
+      - x: 1.25
+        y: -0.25
+        z: 0.75
+      - x: 1.75
+        y: -0.25
+        z: 0.75
+      - x: -1.75
+        y: 0.25
+        z: 0.75
+      - x: -1.25
+        y: 0.25
+        z: 0.75
+      - x: -0.75
+        y: 0.25
+        z: 0.75
+      - x: -0.25
+        y: 0.25
+        z: 0.75
+      - x: 0.25
+        y: 0.25
+        z: 0.75
+      - x: 0.75
+        y: 0.25
+        z: 0.75
+      - x: 1.25
+        y: 0.25
+        z: 0.75
+      - x: 1.75
+        y: 0.25
+        z: 0.75
+      - x: -1.75
+        y: 0.75
+        z: 0.75
+      - x: -1.25
+        y: 0.75
+        z: 0.75
+      - x: -0.75
+        y: 0.75
+        z: 0.75
+      - x: -0.25
+        y: 0.75
+        z: 0.75
+      - x: 0.25
+        y: 0.75
+        z: 0.75
+      - x: 0.75
+        y: 0.75
+        z: 0.75
+      - x: 1.25
+        y: 0.75
+        z: 0.75
+      - x: 1.75
+        y: 0.75
+        z: 0.75
+      - x: -1.75
+        y: 1.25
+        z: 0.75
+      - x: -1.25
+        y: 1.25
+        z: 0.75
+      - x: -0.75
+        y: 1.25
+        z: 0.75
+      - x: -0.25
+        y: 1.25
+        z: 0.75
+      - x: 0.25
+        y: 1.25
+        z: 0.75
+      - x: 0.75
+        y: 1.25
+        z: 0.75
+      - x: 1.25
+        y: 1.25
+        z: 0.75
+      - x: 1.75
+        y: 1.25
+        z: 0.75
+      - x: -1.75
+        y: 1.75
+        z: 0.75
+      - x: -1.25
+        y: 1.75
+        z: 0.75
+      - x: -0.75
+        y: 1.75
+        z: 0.75
+      - x: -0.25
+        y: 1.75
+        z: 0.75
+      - x: 0.25
+        y: 1.75
+        z: 0.75
+      - x: 0.75
+        y: 1.75
+        z: 0.75
+      - x: 1.25
+        y: 1.75
+        z: 0.75
+      - x: 1.75
+        y: 1.75
+        z: 0.75
+      - x: -1.75
+        y: 2.25
+        z: 0.75
+      - x: -1.25
+        y: 2.25
+        z: 0.75
+      - x: -0.75
+        y: 2.25
+        z: 0.75
+      - x: -0.25
+        y: 2.25
+        z: 0.75
+      - x: 0.25
+        y: 2.25
+        z: 0.75
+      - x: 0.75
+        y: 2.25
+        z: 0.75
+      - x: 1.25
+        y: 2.25
+        z: 0.75
+      - x: 1.75
+        y: 2.25
+        z: 0.75
+      - x: -1.75
+        y: 2.75
+        z: 0.75
+      - x: -1.25
+        y: 2.75
+        z: 0.75
+      - x: -0.75
+        y: 2.75
+        z: 0.75
+      - x: -0.25
+        y: 2.75
+        z: 0.75
+      - x: 0.25
+        y: 2.75
+        z: 0.75
+      - x: 0.75
+        y: 2.75
+        z: 0.75
+      - x: 1.25
+        y: 2.75
+        z: 0.75
+      - x: 1.75
+        y: 2.75
+        z: 0.75
+      - x: -1.75
+        y: 3.25
+        z: 0.75
+      - x: -1.25
+        y: 3.25
+        z: 0.75
+      - x: -0.75
+        y: 3.25
+        z: 0.75
+      - x: -0.25
+        y: 3.25
+        z: 0.75
+      - x: 0.25
+        y: 3.25
+        z: 0.75
+      - x: 0.75
+        y: 3.25
+        z: 0.75
+      - x: 1.25
+        y: 3.25
+        z: 0.75
+      - x: 1.75
+        y: 3.25
+        z: 0.75
+      - x: -1.75
+        y: 3.75
+        z: 0.75
+      - x: -1.25
+        y: 3.75
+        z: 0.75
+      - x: -0.75
+        y: 3.75
+        z: 0.75
+      - x: -0.25
+        y: 3.75
+        z: 0.75
+      - x: 0.25
+        y: 3.75
+        z: 0.75
+      - x: 0.75
+        y: 3.75
+        z: 0.75
+      - x: 1.25
+        y: 3.75
+        z: 0.75
+      - x: 1.75
+        y: 3.75
+        z: 0.75
+      - x: -1.75
+        y: -3.75
+        z: 1.25
+      - x: -1.25
+        y: -3.75
+        z: 1.25
+      - x: -0.75
+        y: -3.75
+        z: 1.25
+      - x: -0.25
+        y: -3.75
+        z: 1.25
+      - x: 0.25
+        y: -3.75
+        z: 1.25
+      - x: 0.75
+        y: -3.75
+        z: 1.25
+      - x: 1.25
+        y: -3.75
+        z: 1.25
+      - x: 1.75
+        y: -3.75
+        z: 1.25
+      - x: -1.75
+        y: -3.25
+        z: 1.25
+      - x: -1.25
+        y: -3.25
+        z: 1.25
+      - x: -0.75
+        y: -3.25
+        z: 1.25
+      - x: -0.25
+        y: -3.25
+        z: 1.25
+      - x: 0.25
+        y: -3.25
+        z: 1.25
+      - x: 0.75
+        y: -3.25
+        z: 1.25
+      - x: 1.25
+        y: -3.25
+        z: 1.25
+      - x: 1.75
+        y: -3.25
+        z: 1.25
+      - x: -1.75
+        y: -2.75
+        z: 1.25
+      - x: -1.25
+        y: -2.75
+        z: 1.25
+      - x: -0.75
+        y: -2.75
+        z: 1.25
+      - x: -0.25
+        y: -2.75
+        z: 1.25
+      - x: 0.25
+        y: -2.75
+        z: 1.25
+      - x: 0.75
+        y: -2.75
+        z: 1.25
+      - x: 1.25
+        y: -2.75
+        z: 1.25
+      - x: 1.75
+        y: -2.75
+        z: 1.25
+      - x: -1.75
+        y: -2.25
+        z: 1.25
+      - x: -1.25
+        y: -2.25
+        z: 1.25
+      - x: -0.75
+        y: -2.25
+        z: 1.25
+      - x: -0.25
+        y: -2.25
+        z: 1.25
+      - x: 0.25
+        y: -2.25
+        z: 1.25
+      - x: 0.75
+        y: -2.25
+        z: 1.25
+      - x: 1.25
+        y: -2.25
+        z: 1.25
+      - x: 1.75
+        y: -2.25
+        z: 1.25
+      - x: -1.75
+        y: -1.75
+        z: 1.25
+      - x: -1.25
+        y: -1.75
+        z: 1.25
+      - x: -0.75
+        y: -1.75
+        z: 1.25
+      - x: -0.25
+        y: -1.75
+        z: 1.25
+      - x: 0.25
+        y: -1.75
+        z: 1.25
+      - x: 0.75
+        y: -1.75
+        z: 1.25
+      - x: 1.25
+        y: -1.75
+        z: 1.25
+      - x: 1.75
+        y: -1.75
+        z: 1.25
+      - x: -1.75
+        y: -1.25
+        z: 1.25
+      - x: -1.25
+        y: -1.25
+        z: 1.25
+      - x: -0.75
+        y: -1.25
+        z: 1.25
+      - x: -0.25
+        y: -1.25
+        z: 1.25
+      - x: 0.25
+        y: -1.25
+        z: 1.25
+      - x: 0.75
+        y: -1.25
+        z: 1.25
+      - x: 1.25
+        y: -1.25
+        z: 1.25
+      - x: 1.75
+        y: -1.25
+        z: 1.25
+      - x: -1.75
+        y: -0.75
+        z: 1.25
+      - x: -1.25
+        y: -0.75
+        z: 1.25
+      - x: -0.75
+        y: -0.75
+        z: 1.25
+      - x: -0.25
+        y: -0.75
+        z: 1.25
+      - x: 0.25
+        y: -0.75
+        z: 1.25
+      - x: 0.75
+        y: -0.75
+        z: 1.25
+      - x: 1.25
+        y: -0.75
+        z: 1.25
+      - x: 1.75
+        y: -0.75
+        z: 1.25
+      - x: -1.75
+        y: -0.25
+        z: 1.25
+      - x: -1.25
+        y: -0.25
+        z: 1.25
+      - x: -0.75
+        y: -0.25
+        z: 1.25
+      - x: -0.25
+        y: -0.25
+        z: 1.25
+      - x: 0.25
+        y: -0.25
+        z: 1.25
+      - x: 0.75
+        y: -0.25
+        z: 1.25
+      - x: 1.25
+        y: -0.25
+        z: 1.25
+      - x: 1.75
+        y: -0.25
+        z: 1.25
+      - x: -1.75
+        y: 0.25
+        z: 1.25
+      - x: -1.25
+        y: 0.25
+        z: 1.25
+      - x: -0.75
+        y: 0.25
+        z: 1.25
+      - x: -0.25
+        y: 0.25
+        z: 1.25
+      - x: 0.25
+        y: 0.25
+        z: 1.25
+      - x: 0.75
+        y: 0.25
+        z: 1.25
+      - x: 1.25
+        y: 0.25
+        z: 1.25
+      - x: 1.75
+        y: 0.25
+        z: 1.25
+      - x: -1.75
+        y: 0.75
+        z: 1.25
+      - x: -1.25
+        y: 0.75
+        z: 1.25
+      - x: -0.75
+        y: 0.75
+        z: 1.25
+      - x: -0.25
+        y: 0.75
+        z: 1.25
+      - x: 0.25
+        y: 0.75
+        z: 1.25
+      - x: 0.75
+        y: 0.75
+        z: 1.25
+      - x: 1.25
+        y: 0.75
+        z: 1.25
+      - x: 1.75
+        y: 0.75
+        z: 1.25
+      - x: -1.75
+        y: 1.25
+        z: 1.25
+      - x: -1.25
+        y: 1.25
+        z: 1.25
+      - x: -0.75
+        y: 1.25
+        z: 1.25
+      - x: -0.25
+        y: 1.25
+        z: 1.25
+      - x: 0.25
+        y: 1.25
+        z: 1.25
+      - x: 0.75
+        y: 1.25
+        z: 1.25
+      - x: 1.25
+        y: 1.25
+        z: 1.25
+      - x: 1.75
+        y: 1.25
+        z: 1.25
+      - x: -1.75
+        y: 1.75
+        z: 1.25
+      - x: -1.25
+        y: 1.75
+        z: 1.25
+      - x: -0.75
+        y: 1.75
+        z: 1.25
+      - x: -0.25
+        y: 1.75
+        z: 1.25
+      - x: 0.25
+        y: 1.75
+        z: 1.25
+      - x: 0.75
+        y: 1.75
+        z: 1.25
+      - x: 1.25
+        y: 1.75
+        z: 1.25
+      - x: 1.75
+        y: 1.75
+        z: 1.25
+      - x: -1.75
+        y: 2.25
+        z: 1.25
+      - x: -1.25
+        y: 2.25
+        z: 1.25
+      - x: -0.75
+        y: 2.25
+        z: 1.25
+      - x: -0.25
+        y: 2.25
+        z: 1.25
+      - x: 0.25
+        y: 2.25
+        z: 1.25
+      - x: 0.75
+        y: 2.25
+        z: 1.25
+      - x: 1.25
+        y: 2.25
+        z: 1.25
+      - x: 1.75
+        y: 2.25
+        z: 1.25
+      - x: -1.75
+        y: 2.75
+        z: 1.25
+      - x: -1.25
+        y: 2.75
+        z: 1.25
+      - x: -0.75
+        y: 2.75
+        z: 1.25
+      - x: -0.25
+        y: 2.75
+        z: 1.25
+      - x: 0.25
+        y: 2.75
+        z: 1.25
+      - x: 0.75
+        y: 2.75
+        z: 1.25
+      - x: 1.25
+        y: 2.75
+        z: 1.25
+      - x: 1.75
+        y: 2.75
+        z: 1.25
+      - x: -1.75
+        y: 3.25
+        z: 1.25
+      - x: -1.25
+        y: 3.25
+        z: 1.25
+      - x: -0.75
+        y: 3.25
+        z: 1.25
+      - x: -0.25
+        y: 3.25
+        z: 1.25
+      - x: 0.25
+        y: 3.25
+        z: 1.25
+      - x: 0.75
+        y: 3.25
+        z: 1.25
+      - x: 1.25
+        y: 3.25
+        z: 1.25
+      - x: 1.75
+        y: 3.25
+        z: 1.25
+      - x: -1.75
+        y: 3.75
+        z: 1.25
+      - x: -1.25
+        y: 3.75
+        z: 1.25
+      - x: -0.75
+        y: 3.75
+        z: 1.25
+      - x: -0.25
+        y: 3.75
+        z: 1.25
+      - x: 0.25
+        y: 3.75
+        z: 1.25
+      - x: 0.75
+        y: 3.75
+        z: 1.25
+      - x: 1.25
+        y: 3.75
+        z: 1.25
+      - x: 1.75
+        y: 3.75
+        z: 1.25
+      - x: -1.75
+        y: -3.75
+        z: 1.75
+      - x: -1.25
+        y: -3.75
+        z: 1.75
+      - x: -0.75
+        y: -3.75
+        z: 1.75
+      - x: -0.25
+        y: -3.75
+        z: 1.75
+      - x: 0.25
+        y: -3.75
+        z: 1.75
+      - x: 0.75
+        y: -3.75
+        z: 1.75
+      - x: 1.25
+        y: -3.75
+        z: 1.75
+      - x: 1.75
+        y: -3.75
+        z: 1.75
+      - x: -1.75
+        y: -3.25
+        z: 1.75
+      - x: -1.25
+        y: -3.25
+        z: 1.75
+      - x: -0.75
+        y: -3.25
+        z: 1.75
+      - x: -0.25
+        y: -3.25
+        z: 1.75
+      - x: 0.25
+        y: -3.25
+        z: 1.75
+      - x: 0.75
+        y: -3.25
+        z: 1.75
+      - x: 1.25
+        y: -3.25
+        z: 1.75
+      - x: 1.75
+        y: -3.25
+        z: 1.75
+      - x: -1.75
+        y: -2.75
+        z: 1.75
+      - x: -1.25
+        y: -2.75
+        z: 1.75
+      - x: -0.75
+        y: -2.75
+        z: 1.75
+      - x: -0.25
+        y: -2.75
+        z: 1.75
+      - x: 0.25
+        y: -2.75
+        z: 1.75
+      - x: 0.75
+        y: -2.75
+        z: 1.75
+      - x: 1.25
+        y: -2.75
+        z: 1.75
+      - x: 1.75
+        y: -2.75
+        z: 1.75
+      - x: -1.75
+        y: -2.25
+        z: 1.75
+      - x: -1.25
+        y: -2.25
+        z: 1.75
+      - x: -0.75
+        y: -2.25
+        z: 1.75
+      - x: -0.25
+        y: -2.25
+        z: 1.75
+      - x: 0.25
+        y: -2.25
+        z: 1.75
+      - x: 0.75
+        y: -2.25
+        z: 1.75
+      - x: 1.25
+        y: -2.25
+        z: 1.75
+      - x: 1.75
+        y: -2.25
+        z: 1.75
+      - x: -1.75
+        y: -1.75
+        z: 1.75
+      - x: -1.25
+        y: -1.75
+        z: 1.75
+      - x: -0.75
+        y: -1.75
+        z: 1.75
+      - x: -0.25
+        y: -1.75
+        z: 1.75
+      - x: 0.25
+        y: -1.75
+        z: 1.75
+      - x: 0.75
+        y: -1.75
+        z: 1.75
+      - x: 1.25
+        y: -1.75
+        z: 1.75
+      - x: 1.75
+        y: -1.75
+        z: 1.75
+      - x: -1.75
+        y: -1.25
+        z: 1.75
+      - x: -1.25
+        y: -1.25
+        z: 1.75
+      - x: -0.75
+        y: -1.25
+        z: 1.75
+      - x: -0.25
+        y: -1.25
+        z: 1.75
+      - x: 0.25
+        y: -1.25
+        z: 1.75
+      - x: 0.75
+        y: -1.25
+        z: 1.75
+      - x: 1.25
+        y: -1.25
+        z: 1.75
+      - x: 1.75
+        y: -1.25
+        z: 1.75
+      - x: -1.75
+        y: -0.75
+        z: 1.75
+      - x: -1.25
+        y: -0.75
+        z: 1.75
+      - x: -0.75
+        y: -0.75
+        z: 1.75
+      - x: -0.25
+        y: -0.75
+        z: 1.75
+      - x: 0.25
+        y: -0.75
+        z: 1.75
+      - x: 0.75
+        y: -0.75
+        z: 1.75
+      - x: 1.25
+        y: -0.75
+        z: 1.75
+      - x: 1.75
+        y: -0.75
+        z: 1.75
+      - x: -1.75
+        y: -0.25
+        z: 1.75
+      - x: -1.25
+        y: -0.25
+        z: 1.75
+      - x: -0.75
+        y: -0.25
+        z: 1.75
+      - x: -0.25
+        y: -0.25
+        z: 1.75
+      - x: 0.25
+        y: -0.25
+        z: 1.75
+      - x: 0.75
+        y: -0.25
+        z: 1.75
+      - x: 1.25
+        y: -0.25
+        z: 1.75
+      - x: 1.75
+        y: -0.25
+        z: 1.75
+      - x: -1.75
+        y: 0.25
+        z: 1.75
+      - x: -1.25
+        y: 0.25
+        z: 1.75
+      - x: -0.75
+        y: 0.25
+        z: 1.75
+      - x: -0.25
+        y: 0.25
+        z: 1.75
+      - x: 0.25
+        y: 0.25
+        z: 1.75
+      - x: 0.75
+        y: 0.25
+        z: 1.75
+      - x: 1.25
+        y: 0.25
+        z: 1.75
+      - x: 1.75
+        y: 0.25
+        z: 1.75
+      - x: -1.75
+        y: 0.75
+        z: 1.75
+      - x: -1.25
+        y: 0.75
+        z: 1.75
+      - x: -0.75
+        y: 0.75
+        z: 1.75
+      - x: -0.25
+        y: 0.75
+        z: 1.75
+      - x: 0.25
+        y: 0.75
+        z: 1.75
+      - x: 0.75
+        y: 0.75
+        z: 1.75
+      - x: 1.25
+        y: 0.75
+        z: 1.75
+      - x: 1.75
+        y: 0.75
+        z: 1.75
+      - x: -1.75
+        y: 1.25
+        z: 1.75
+      - x: -1.25
+        y: 1.25
+        z: 1.75
+      - x: -0.75
+        y: 1.25
+        z: 1.75
+      - x: -0.25
+        y: 1.25
+        z: 1.75
+      - x: 0.25
+        y: 1.25
+        z: 1.75
+      - x: 0.75
+        y: 1.25
+        z: 1.75
+      - x: 1.25
+        y: 1.25
+        z: 1.75
+      - x: 1.75
+        y: 1.25
+        z: 1.75
+      - x: -1.75
+        y: 1.75
+        z: 1.75
+      - x: -1.25
+        y: 1.75
+        z: 1.75
+      - x: -0.75
+        y: 1.75
+        z: 1.75
+      - x: -0.25
+        y: 1.75
+        z: 1.75
+      - x: 0.25
+        y: 1.75
+        z: 1.75
+      - x: 0.75
+        y: 1.75
+        z: 1.75
+      - x: 1.25
+        y: 1.75
+        z: 1.75
+      - x: 1.75
+        y: 1.75
+        z: 1.75
+      - x: -1.75
+        y: 2.25
+        z: 1.75
+      - x: -1.25
+        y: 2.25
+        z: 1.75
+      - x: -0.75
+        y: 2.25
+        z: 1.75
+      - x: -0.25
+        y: 2.25
+        z: 1.75
+      - x: 0.25
+        y: 2.25
+        z: 1.75
+      - x: 0.75
+        y: 2.25
+        z: 1.75
+      - x: 1.25
+        y: 2.25
+        z: 1.75
+      - x: 1.75
+        y: 2.25
+        z: 1.75
+      - x: -1.75
+        y: 2.75
+        z: 1.75
+      - x: -1.25
+        y: 2.75
+        z: 1.75
+      - x: -0.75
+        y: 2.75
+        z: 1.75
+      - x: -0.25
+        y: 2.75
+        z: 1.75
+      - x: 0.25
+        y: 2.75
+        z: 1.75
+      - x: 0.75
+        y: 2.75
+        z: 1.75
+      - x: 1.25
+        y: 2.75
+        z: 1.75
+      - x: 1.75
+        y: 2.75
+        z: 1.75
+      - x: -1.75
+        y: 3.25
+        z: 1.75
+      - x: -1.25
+        y: 3.25
+        z: 1.75
+      - x: -0.75
+        y: 3.25
+        z: 1.75
+      - x: -0.25
+        y: 3.25
+        z: 1.75
+      - x: 0.25
+        y: 3.25
+        z: 1.75
+      - x: 0.75
+        y: 3.25
+        z: 1.75
+      - x: 1.25
+        y: 3.25
+        z: 1.75
+      - x: 1.75
+        y: 3.25
+        z: 1.75
+      - x: -1.75
+        y: 3.75
+        z: 1.75
+      - x: -1.25
+        y: 3.75
+        z: 1.75
+      - x: -0.75
+        y: 3.75
+        z: 1.75
+      - x: -0.25
+        y: 3.75
+        z: 1.75
+      - x: 0.25
+        y: 3.75
+        z: 1.75
+      - x: 0.75
+        y: 3.75
+        z: 1.75
+      - x: 1.25
+        y: 3.75
+        z: 1.75
+      - x: 1.75
+        y: 3.75
+        z: 1.75
+      bounds:
+        Min:
+          x: -2
+          y: -4
+          z: -2
+        Max:
+          x: 2
+          y: 4
+          z: 2
+        Position: {x: 0, y: 0, z: 0}
+      sphereBounds:
+        Position: {x: 0, y: 0, z: 0}
+        Radius: 0
+      spacing: 0.25
+    density: 1.98
+    mass: 0
+    damping: 0.025
+    viscosity: 0.01
+    toxicity: -1
+  runtimeFluids:
+  - gameObject: {fileID: 195301994}
+    position:
+      x: 0
+      y: 0
+      z: 0
+    bounds:
+      positions: []
+      bounds:
+        Min:
+          x: 0
+          y: 0
+          z: 0
+        Max:
+          x: 0
+          y: 0
+          z: 0
+        Position: {x: 0, y: 0, z: 0}
+      sphereBounds:
+        Position: {x: 0, y: 0, z: 0}
+        Radius: 0
+      spacing: 0
+    density: 1.98
+    mass: 0
+    damping: 0.025
+    viscosity: 0.01
+    toxicity: -1
+  force:
+    gravity:
+      x: 0
+      y: 0.8100000023841858
+      z: 0
+    drag:
+      x: 0.10000000149011612
+      y: 0
+      z: 0
+    windForces: []
+    windBoxes: []
+--- !u!114 &722011152
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 722011149}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eccfa15b7cae91e4bad0c2e8d7940f40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pooledGas: []
+  gasToPool: {fileID: 1074848958884656, guid: c812f79394735674694257b65999f86b, type: 2}
+  amountToPool: 10000
+--- !u!4 &722011153
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 722011149}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &815216340
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4713454305148582, guid: 03b09a1c01f78c240922c06b36a4225f, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 1.0550698
+      objectReference: {fileID: 0}
+    - target: {fileID: 4713454305148582, guid: 03b09a1c01f78c240922c06b36a4225f, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 48.53504
+      objectReference: {fileID: 0}
+    - target: {fileID: 4713454305148582, guid: 03b09a1c01f78c240922c06b36a4225f, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -0.42129672
+      objectReference: {fileID: 0}
+    - target: {fileID: 4713454305148582, guid: 03b09a1c01f78c240922c06b36a4225f, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0.5023839
+      objectReference: {fileID: 0}
+    - target: {fileID: 4713454305148582, guid: 03b09a1c01f78c240922c06b36a4225f, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0.4959897
+      objectReference: {fileID: 0}
+    - target: {fileID: 4713454305148582, guid: 03b09a1c01f78c240922c06b36a4225f, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0.47149956
+      objectReference: {fileID: 0}
+    - target: {fileID: 4713454305148582, guid: 03b09a1c01f78c240922c06b36a4225f, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: -0.52848166
+      objectReference: {fileID: 0}
+    - target: {fileID: 4713454305148582, guid: 03b09a1c01f78c240922c06b36a4225f, type: 2}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 20611593624434944, guid: 03b09a1c01f78c240922c06b36a4225f,
+        type: 2}
+      propertyPath: m_ClearFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4713454305148582, guid: 03b09a1c01f78c240922c06b36a4225f, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4713454305148582, guid: 03b09a1c01f78c240922c06b36a4225f, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114546340776895066, guid: 03b09a1c01f78c240922c06b36a4225f,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 03b09a1c01f78c240922c06b36a4225f, type: 2}
+  m_IsPrefabAsset: 0
+--- !u!1 &1092694959
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1092694964}
+  - component: {fileID: 1092694963}
+  - component: {fileID: 1092694962}
+  - component: {fileID: 1092694961}
+  - component: {fileID: 1092694960}
+  m_Layer: 10
+  m_Name: WallS
+  m_TagString: Cube
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!54 &1092694960
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1092694959}
+  serializedVersion: 2
+  m_Mass: 0.0000001
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 2
+--- !u!65 &1092694961
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1092694959}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &1092694962
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1092694959}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
+  m_Materials:
+  - {fileID: 2100000, guid: 06d6d0cf88be8814996b611f63520d5b, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &1092694963
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1092694959}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1092694964
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1092694959}
+  m_LocalRotation: {x: 0.5, y: 0.5, z: 0.5, w: 0.5}
+  m_LocalPosition: {x: 0, y: 13.36, z: -6}
+  m_LocalScale: {x: 13, y: 0, z: 12}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 90}
+--- !u!1 &1296871075
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1296871080}
+  - component: {fileID: 1296871079}
+  - component: {fileID: 1296871078}
+  - component: {fileID: 1296871077}
+  - component: {fileID: 1296871076}
+  m_Layer: 10
+  m_Name: WallN
+  m_TagString: Cube
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!54 &1296871076
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1296871075}
+  serializedVersion: 2
+  m_Mass: 0.0000001
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 2
+--- !u!65 &1296871077
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1296871075}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &1296871078
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1296871075}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
+  m_Materials:
+  - {fileID: 2100000, guid: 06d6d0cf88be8814996b611f63520d5b, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &1296871079
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1296871075}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1296871080
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1296871075}
+  m_LocalRotation: {x: 0.5, y: 0.5, z: 0.5, w: 0.5}
+  m_LocalPosition: {x: 0, y: 13.36, z: 6}
+  m_LocalScale: {x: 13, y: 0, z: 12}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 90}
+--- !u!1 &1661210941
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1661210946}
+  - component: {fileID: 1661210945}
+  - component: {fileID: 1661210944}
+  - component: {fileID: 1661210943}
+  - component: {fileID: 1661210942}
+  m_Layer: 10
+  m_Name: WallW
+  m_TagString: Cube
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!54 &1661210942
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1661210941}
+  serializedVersion: 2
+  m_Mass: 0.0000001
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 2
+--- !u!65 &1661210943
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1661210941}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &1661210944
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1661210941}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
+  m_Materials:
+  - {fileID: 2100000, guid: 06d6d0cf88be8814996b611f63520d5b, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &1661210945
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1661210941}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1661210946
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1661210941}
+  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: -6, y: 13.36, z: 0}
+  m_LocalScale: {x: 13, y: 0, z: 12}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
